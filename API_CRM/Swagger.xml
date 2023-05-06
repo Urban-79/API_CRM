@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API_CRM</name>
+    </assembly>
+    <members>
+        <member name="M:API_CRM.Controllers.ClientsController.GetCustomer(System.Int32)">
+            <summary>
+            Get Client
+            </summary>
+            <param name="id">Id du client</param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_CRM.Controllers.ClientsController.GetCustomers">
+            <summary>
+            Get All Clients
+            </summary>
+            <returns>test</returns>
+        </member>
+        <member name="T:API_ERP.Class.Customer">
+            <summary>
+            Classe du client
+            </summary>
+        </member>
+        <member name="T:API_ERP.Class.Address">
+            <summary>
+            Classe adresse du client
+            </summary>
+        </member>
+        <member name="T:API_ERP.Class.Profile">
+            <summary>
+            Classe profile du client
+            </summary>
+        </member>
+        <member name="T:API_ERP.Class.Company">
+            <summary>
+            Classe Entreprise du client
+            </summary>
+        </member>
+        <member name="T:API_ERP.Class.Order">
+            <summary>
+            Classe Commande du client
+            </summary>
+        </member>
+    </members>
+</doc>
