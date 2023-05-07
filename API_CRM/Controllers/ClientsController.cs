@@ -45,5 +45,53 @@ namespace API_CRM.Controllers
             }
             return Ok(customers);
         }
+        /// <summary>
+        /// Add Clients
+        /// </summary>
+        /// <param name="addedCustomer">object client</param>
+        /// <returns>test</returns>
+
+        [HttpPost]
+        public async Task<IActionResult> AddCustomer(Customer addedCustomer)
+        {
+            Customer customers = await _CRMApiService.AddCustomerAsync(addedCustomer);
+            if (customers == null)
+            {
+                return NotFound();
+            }
+            return Ok(customers);
+        }
+        /// <summary>
+        /// Delete Client
+        /// </summary>
+        /// <param name="id">id client</param>
+        /// <returns>test</returns>
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteCustomer(int id)
+        {
+            Customer customers = await _CRMApiService.DeleteCustomerAsync(id);
+            if (customers == null)
+            {
+                return NotFound();
+            }
+            return Ok(customers);
+        }
+        /// <summary>
+        /// Update Client
+        /// </summary>
+        /// <param name="updatedCustomer">object client</param>
+        /// <returns>test</returns>
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateCustomer(Customer updatedCustomer)
+        {
+            Customer customers = await _CRMApiService.UpdateCustomerAsync(updatedCustomer);
+            if (customers == null)
+            {
+                return NotFound();
+            }
+            return Ok(customers);
+        }
     }
 }

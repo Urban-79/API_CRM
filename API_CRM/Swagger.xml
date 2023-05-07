@@ -17,6 +17,27 @@
             </summary>
             <returns>test</returns>
         </member>
+        <member name="M:API_CRM.Controllers.ClientsController.AddCustomer(API_ERP.Class.Customer)">
+            <summary>
+            Add Clients
+            </summary>
+            <param name="addedCustomer">object client</param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_CRM.Controllers.ClientsController.DeleteCustomer(System.Int32)">
+            <summary>
+            Delete Client
+            </summary>
+            <param name="id">id client</param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_CRM.Controllers.ClientsController.UpdateCustomer(API_ERP.Class.Customer)">
+            <summary>
+            Update Client
+            </summary>
+            <param name="updatedCustomer">object client</param>
+            <returns>test</returns>
+        </member>
         <member name="T:API_ERP.Class.Customer">
             <summary>
             Classe du client

@@ -15,6 +15,7 @@ namespace API_CRM.Class
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("https://615f5fb4f7254d0017068109.mockapi.io/api/v1/");
         }
+
         public async Task<Customer> GetCustomerAsync(int  id)
         {
             var response = await _httpClient.GetAsync($"customers/" + id);
@@ -35,12 +36,28 @@ namespace API_CRM.Class
             }
             return null;
         }
+        public async Task<Customer> AddCustomerAsync(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
 
+        public Task<Customer> UpdateCustomerAsync(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Customer> DeleteCustomerAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
     public interface ICRMApiService
     {
         Task<Customer> GetCustomerAsync(int id);
         Task<List<Customer>> GetCustomersAsync();
+        Task<Customer> AddCustomerAsync(Customer customer);
+        Task<Customer> UpdateCustomerAsync(Customer customer);
+        Task<Customer> DeleteCustomerAsync(int id);
     }
 
 }
