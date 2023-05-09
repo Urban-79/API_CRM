@@ -14,6 +14,7 @@ using System.Security.Cryptography;
 using System.Text;
 using static System.Net.Mime.MediaTypeNames;
 using MimeKit;
+using MimeKit.Text;
 
 namespace API_CRM.Controllers
 {
@@ -146,5 +147,6 @@ namespace API_CRM.Controllers
             smtp.EnableSsl = true;
             smtp.Send(message);
         }
+       
     }
 }
