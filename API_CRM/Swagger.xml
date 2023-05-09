@@ -72,6 +72,13 @@
             <param name="updatedCustomer">object client</param>
             <returns>test</returns>
         </member>
+        <member name="M:API_CRM.Controllers.ClientsController.GenerateQRCode(System.String,System.String)">
+            <summary>
+            Générer un QRCode
+            </summary>
+            <param name="data"></param>
+            <param name="fileName"></param>
+        </member>
         <member name="T:API_ERP.Class.Customer">
             <summary>
             Classe du client

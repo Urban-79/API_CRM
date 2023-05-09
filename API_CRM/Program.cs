@@ -30,6 +30,7 @@ namespace API_CRM
                 string xmlPath = Path.Combine(AppContext.BaseDirectory, "Swagger.xml");
                 c.IncludeXmlComments(xmlPath);
             });
+            
             //builder.Services.AddSingleton<ICRMApiService>(new CRMApiService()); //Context API 
             builder.Services.AddSingleton<ICRMApiService>(new CRMContextMock()); //Context Mock
 
