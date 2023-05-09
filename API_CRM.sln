@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_CRM", "API_CRM\API_CRM.csproj", "{6AB19CB7-6902-4E39-95DF-7F8E11AE40D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_CRM", "API_CRM\API_CRM.csproj", "{6AB19CB7-6902-4E39-95DF-7F8E11AE40D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_CRM_Test", "API_CRM_Test\API_CRM_Test.csproj", "{BF574F93-6220-4020-A156-DE05CD07E4DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6AB19CB7-6902-4E39-95DF-7F8E11AE40D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AB19CB7-6902-4E39-95DF-7F8E11AE40D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AB19CB7-6902-4E39-95DF-7F8E11AE40D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF574F93-6220-4020-A156-DE05CD07E4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF574F93-6220-4020-A156-DE05CD07E4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF574F93-6220-4020-A156-DE05CD07E4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF574F93-6220-4020-A156-DE05CD07E4DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,7 +5,7 @@ namespace API_CRM.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Prospects : ControllerBase
+    public class ProspectsController : ControllerBase
     {
     }
 }

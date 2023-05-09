@@ -36,7 +36,7 @@ namespace API_CRM.Controllers
         /// <returns>test</returns>
 
         [HttpGet]
-        public async Task<IActionResult> GetCustomers()
+        public async Task<IActionResult> GetAllCustomers()
         {
             List<Customer> customers = await _CRMApiService.GetCustomersAsync();
             if (customers == null)

@@ -4,6 +4,40 @@
         <name>API_CRM</name>
     </assembly>
     <members>
+        <member name="M:API_CRM.Class.Utils.GenerateQRCode(System.String,System.String)">
+            <summary>
+            Générer un QRCode
+            </summary>
+            <param name="data"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:API_CRM.Class.Utils.SendEmailWithAttachment(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Envoi d'un email
+            </summary>
+            <param name="fromAddress"></param>
+            <param name="toAddress"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:API_CRM.Controllers.AuthController.GenerateQRCode(System.String,System.String)">
+            <summary>
+            Générer un QRCode
+            </summary>
+            <param name="data"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:API_CRM.Controllers.AuthController.SendEmailWithAttachment(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Envoi d'un email
+            </summary>
+            <param name="fromAddress"></param>
+            <param name="toAddress"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="fileName"></param>
+        </member>
         <member name="M:API_CRM.Controllers.ClientsController.GetCustomer(System.Int32)">
             <summary>
             Get Client
@@ -11,7 +45,7 @@
             <param name="id">Id du client</param>
             <returns>test</returns>
         </member>
-        <member name="M:API_CRM.Controllers.ClientsController.GetCustomers">
+        <member name="M:API_CRM.Controllers.ClientsController.GetAllCustomers">
             <summary>
             Get All Clients
             </summary>
