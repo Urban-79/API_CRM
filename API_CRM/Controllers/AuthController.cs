@@ -34,7 +34,7 @@ namespace API_CRM.Controllers
         public async Task<ActionResult<User>> Register([FromBody] UserDto request)
         {
             CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
-
+            user.Id = 1;
             user.AdresseMail = request.AdresseMail;
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
@@ -66,7 +66,8 @@ namespace API_CRM.Controllers
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.AdresseMail),
+                new Claim("email", user.AdresseMail),
+                new Claim("id", user.Id.ToString()),
                 new Claim(ClaimTypes.Role, "Admin")
             };
 
