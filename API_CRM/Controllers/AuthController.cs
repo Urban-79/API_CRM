@@ -58,7 +58,7 @@ namespace API_CRM.Controllers
             GenerateQRCode(token, "qrcode.png");
             //SendEmailWithAttachment("pydima@gmail.com", "pydima@gmail.com", "QRCODE JWT", "testtt", "", "");
 
-            return Ok(token);
+            return Ok(new { token = token });
         }
 
 
