@@ -29,18 +29,18 @@ namespace API_CRM.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<ActionResult<User>> Register(UserDto request)
+        public async Task<ActionResult<User>> Register([FromBody] UserDto request)
         {
             CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
             user.AdresseMail = request.AdresseMail;
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
-            return Ok("Créé");
+            return Ok(user);
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<string>> Login(UserDto request)
+        public async Task<ActionResult<string>> Login([FromBody] UserDto request)
         {
             if (user.AdresseMail != request.AdresseMail)
             {
@@ -53,8 +53,9 @@ namespace API_CRM.Controllers
             }
 
             string token = CreateToken(user);
-            //GenerateQRCode("https://www.example.com", "qrcode.png");
+            GenerateQRCode("https://www.example.com", "qrcode.png");
             //SendEmailWithAttachment("pydima@gmail.com",user.AdresseMail,"QRCODE JWT", "testtt","","");
+            
             return Ok(token);
         }
 
@@ -106,15 +107,15 @@ namespace API_CRM.Controllers
         /// <param name="data"></param>
         /// <param name="fileName"></param>
 
-        //public static void GenerateQRCode(string data, string fileName)
-        //{
-        //    QRCodeGenerator qrGenerator = new QRCodeGenerator();
-        //    QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
-        //    QRCode qrCode = new QRCode(qrCodeData);
-        //    Bitmap qrCodeImage = qrCode.GetGraphic(20);
+        public static void GenerateQRCode(string data, string fileName)
+        {
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
-        //    qrCodeImage.Save(fileName, ImageFormat.Png);
-        //}
+            qrCodeImage.Save(fileName, ImageFormat.Png);
+        }
 
         /// <summary>
         /// Envoi d'un email
