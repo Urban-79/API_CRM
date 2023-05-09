@@ -12,6 +12,8 @@ using System.Net.Mail;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using static System.Net.Mime.MediaTypeNames;
+using MimeKit;
 
 namespace API_CRM.Controllers
 {
@@ -53,9 +55,9 @@ namespace API_CRM.Controllers
             }
 
             string token = CreateToken(user);
-            GenerateQRCode("https://www.example.com", "qrcode.png");
-            //SendEmailWithAttachment("pydima@gmail.com",user.AdresseMail,"QRCODE JWT", "testtt","","");
-            
+            GenerateQRCode(token, "qrcode.png");
+            //SendEmailWithAttachment("pydima@gmail.com", "pydima@gmail.com", "QRCODE JWT", "testtt", "", "");
+
             return Ok(token);
         }
 
@@ -137,7 +139,7 @@ namespace API_CRM.Controllers
             //Attachment attachment = new Attachment(fileName);
             //message.Attachments.Add(attachment);
 
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 465);
+            SmtpClient smtp = new SmtpClient("email-smtp.us-west-2.amazonaws.com", 587);
             smtp.UseDefaultCredentials = false;
             //smtp.Credentials =new System.Net.NetworkCredential(fromAddress,password); // Remplacez "votre_mot_de_passe" par votre propre mot de passe
             smtp.EnableSsl = true;
