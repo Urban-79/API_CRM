@@ -1,5 +1,6 @@
 using API_CRM.Class;
 using API_CRM.Context;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 namespace API_CRM
@@ -11,7 +12,7 @@ namespace API_CRM
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Configuration.GetConnectionString("Bdd");
+            //builder.Services.AddDbContext<BddContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("")));
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

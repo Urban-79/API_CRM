@@ -36,8 +36,7 @@ namespace API_CRM.Controllers
             user.AdresseMail = request.AdresseMail;
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
-            string token = CreateToken(user);
-            return Ok(token);
+            return Ok("Créé");
         }
 
         [HttpPost("login")]
@@ -53,10 +52,10 @@ namespace API_CRM.Controllers
                 return BadRequest("erreur password.");
             }
 
-            
+            string token = CreateToken(user);
             //GenerateQRCode("https://www.example.com", "qrcode.png");
             //SendEmailWithAttachment("pydima@gmail.com",user.AdresseMail,"QRCODE JWT", "testtt","","");
-            return Ok("Connecté");
+            return Ok(token);
         }
 
 
