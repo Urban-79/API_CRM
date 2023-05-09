@@ -106,15 +106,15 @@ namespace API_CRM.Controllers
         /// <param name="data"></param>
         /// <param name="fileName"></param>
 
-        public static void GenerateQRCode(string data, string fileName)
-        {
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeImage = qrCode.GetGraphic(20);
+        //public static void GenerateQRCode(string data, string fileName)
+        //{
+        //    QRCodeGenerator qrGenerator = new QRCodeGenerator();
+        //    QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
+        //    QRCode qrCode = new QRCode(qrCodeData);
+        //    Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
-            qrCodeImage.Save(fileName, ImageFormat.Png);
-        }
+        //    qrCodeImage.Save(fileName, ImageFormat.Png);
+        //}
 
         /// <summary>
         /// Envoi d'un email
